@@ -1,0 +1,418 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+/*hlavicka / navbar*/
+.hero {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(fotky/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    flex-direction: column;
+    position: relative;
+    height: 30vw;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%); 
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%); 
+} 
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.nadpis {
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: 150px;
+}
+.podnadpis {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+/*carusel*/
+.fotky  {
+   margin-top: 150px;
+   width: 100vw;
+}
+.fotky img {
+    height: 500px;
+    object-fit: cover;
+}
+.fotky h2 {
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.fotky p {
+    color: white;
+    text-align: center;
+    
+}
+.fotky a {
+    text-decoration: none;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+/*Články*/
+.clanky {
+    margin-top: 100px;
+    width: 100vw;
+}
+.clanky h2 {
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.clanky p {
+    color: white;
+    text-align: center;
+}
+.clanky img {
+    height: 350px;
+    width: 100%;
+}
+.clanky p i {
+    font-style: italic;
+    font-size: smaller;
+}
+.clanky p {
+    font-size: small;
+}
+.clanky h5 {
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.clanky a {
+    text-decoration: none;
+    font-style: italic;
+}
+
+/*päta*/
+footer {
+    margin-top: 100px;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(fotky/footer.jpg);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 15%); 
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 15%);
+    width: 100vw;
+    height: 20vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end; 
+    
+}
+footer div a {
+    text-decoration: none;
+}
+
+/*O nás*/
+.citaty {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-top: 50px;
+}
+.text {
+    display: flex;
+    gap: 50px;
+    color: white;
+    margin: 50px;
+}
+.meno {
+    text-align: center;
+    color: white;
+}
+.ludia {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+    gap: 30px;
+}
+.ludia p {
+    color: white;
+    font-size: small;
+}
+
+/*formular*/
+form {
+    color: white;
+    margin: 50px;
+}
+form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+}
+form button:hover {
+    background-color: #0056b3;
+}
+
+/*Pribehy/Clanky*/
+.fotka_pribeh {
+    width: 350px;
+}
+.pribehy {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+section h3, section h4 {
+    color: white;
+    text-align: center;
+}
+section h4 {
+    font-style: italic;
+}
+
+.pribeh1 {
+    margin: 50px;
+    color: white;
+    text-align: center;
+}
+.pribeh2 {
+    margin: 50px;
+    color: white;
+    text-align: center;
+}
+.pribeh3 {
+    margin: 50px;
+    color: white;
+    text-align: center;
+}
+.pribeh4 {
+    margin: 50px;
+    color: white;
+    text-align: center;
+}
+
+/*galeria*/
+.gallery-grid {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.main-img {
+    width: 300px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.main-img:hover {
+    transform: scale(1.05);
+}
+
+.popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 30%;
+    height: 30%;
+    border-radius: 8px;
+}
+.galeria1, .galeria2, .galeria3, .galeria4 {
+    color: white;
+}
+.gallery-grid p {
+    text-align: center;
+}
+
+/* TABLET (do 768px) */
+@media screen and (max-width: 768px) {
+    .body {
+        max-width: 100vw;
+    }
+    
+    .nadpis {
+        font-size: 40px;
+        margin-top: 100px;
+        
+    }
+    .hero {
+        height: 50vw;
+    }
+
+    .podnadpis {
+        font-size: 20px;
+    }
+
+    .fotky img {
+        height: 300px;
+    }
+
+    .clanky img {
+        height: 250px;
+    }
+
+    .text {
+        flex-direction: column;
+        gap: 30px;
+        margin: 30px;
+    }
+
+    .ludia {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .pribehy {
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .gallery-grid {
+        flex-direction: column !important;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center !important;
+    }
+
+    .main-img {
+        min-width: 95%;
+        margin: 0 auto;
+        margin-right: 0;
+    }
+
+    .image-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-grid img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* TELEFÓN (do 480px) */
+@media screen and (max-width: 480px) {
+    .body {
+        max-width: 100vw;
+    }
+    nav {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        font-size: 10px;
+    }
+    .hero {
+        height: 55vw;
+    }
+    .nadpis {
+        font-size: 40px !important;
+        margin-top: 20px !important;
+    }
+
+    .podnadpis {
+        font-size: 18px;
+    }
+
+    .fotky img {
+        height: 200px;
+    }
+
+    .clanky img {
+        height: 200px;
+    }
+
+    .text {
+        margin: 20px;
+    }
+
+    .ludia {
+        margin: 20px;
+    }
+
+    .pribehy {
+        padding: 20px;
+    }
+
+    .pribeh1, .pribeh2, .pribeh3, .pribeh4 {
+        margin: 20px auto;
+    }
+
+    .main-img {
+        min-width: 90%;
+        margin: 0 auto;
+        margin-right: 0;
+    }
+
+    .popup-content {
+        max-width: 95%;
+        max-height: 90%;
+    }
+
+    form {
+        margin: 20px;
+    }
+
+    .gallery-grid {
+        flex-direction: column !important;
+        align-items: center;
+        width: 100%;
+        justify-content: center !important;
+        margin-top: 40px;
+    }
+
+    footer {
+        height: 40vw;
+    }
+}
